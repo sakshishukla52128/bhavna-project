@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer with Paper Pop Effects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background-color: #00004d; /* Dark blue background for the entire footer */
+            color: #fff; /* White font color */
+            padding: 40px 20px;
+            position: relative;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        /* Colorful Paper Pop Effects */
+        footer::before, footer::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
+            border-radius: 50%;
+            animation: popEffect 10s infinite alternate;
+        }
+
+        footer::before {
+            top: -50px;
+            left: -50px;
+            background: radial-gradient(circle, rgba(255, 99, 71, 0.8), rgba(0, 0, 0, 0)); /* Tomato red */
+        }
+
+        footer::after {
+            bottom: -50px;
+            right: -50px;
+            background: radial-gradient(circle, rgba(60, 179, 113, 0.8), rgba(0, 0, 0, 0)); /* Medium sea green */
+        }
+
+        @keyframes popEffect {
+            0% { transform: scale(0.8); opacity: 0.6; }
+            100% { transform: scale(1.2); opacity: 1; }
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px 20px;
+            min-width: 250px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-column h2 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #ffcc00; /* Yellow for headings */
+        }
+
+        .footer-column p, .footer-column ul {
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .footer-column ul {
+            list-style-type: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .footer-column a {
+            color: #fff; /* White font for links */
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .footer-column a:hover {
+            color: #ffcc00; /* Hover effect - Yellow color */
+            text-decoration: underline;
+        }
+
+        .footer-column a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffcc00;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .footer-column a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .bottom-links {
+            text-align: center;
+            margin-top: 30px;
+            color: #ddd;
+        }
+
+        .bottom-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .bottom-links a:hover {
+            color: #ffcc00; /* Hover effect for bottom links */
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-column {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h2>Contact Us</h2>
+                <p><i class="fa fa-map-marker-alt"></i> Bhavna Trust Junior & Degree College of Commerce & Science</p>
+                <p>Plot No. 5, Sunder Baug, Raje Shivaji Chowk, V.N.Purav Marg, Deonar - Chembur, Mumbai-400 088, Maharashtra</p>
+                <p><i class="fa fa-phone"></i> 022-25518649, 022-25484950</p>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:bhavna.trust5333@gmail.com">bhavna.trust5333@gmail.com</a></p>
+            </div>
+            
+            <div class="footer-column">
+                <h2>Important Links</h2>
+                <ul>
+                    <li><i class="fa fa-university"></i> <a href="#">University of Mumbai</a></li>
+                    <li><i class="fa fa-graduation-cap"></i> <a href="#">Scholarship/Freeship</a></li>
+                    <li><i class="fa fa-share-alt"></i> <a href="#">SWAYAM</a></li>
+                    <li><i class="fa fa-university"></i> <a href="#">UGC</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Program</a></li>
+                    <li><a href="#">Curriculum</a></li>
+                    <li><a href="#">Apply</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Use</a> |
+            <a href="#">Cookie Policy</a> |
+            <a href="#">Security</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        /* Body styling for better aesthetic */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #3a3aab, #00004d);
+            padding: 20px 0;
+            margin: 0 0 30px;
+            border-bottom: 4px solid #fff;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Styling for each congratulation box */
+        .congratulation {
+            background: linear-gradient(145deg, #1e1e6d, #00004d);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 10px;
+            width: 300px; /* Adjusted width for better fit */
+            display: inline-block;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+            vertical-align: top;
+        }
+
+        .congratulation:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Square background for the image */
+        .image-container {
+            background-color: #fff;
+            width: 100px; /* Adjusted width */
+            height: 100px; /* Adjusted height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+            border-radius: 10px; /* Square corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .congratulation img {
+            width: 90px; /* Adjusted width */
+            height: 90px; /* Adjusted height */
+            border-radius: 5px; /* Square corners */
+        }
+
+        .congratulation h2 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .congratulation h3 {
+            margin: 15px 0 10px;
+            font-size: 1.5em;
+            color: #ffdd57;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .congratulation p {
+            font-size: 1em;
+            margin: 10px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .company {
+            font-weight: bold;
+            color: #ffdd57;
+            display: block;
+        }
+
+        .ctc {
+            color: #a8e063;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        /* Marquee styling */
+        .marquee {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: scroll 20s linear infinite; /* Slowed down animation speed */
+        }
+
+        .marquee .congratulation {
+            margin: 0 15px; /* Margin between boxes */
+        }
+
+        /* Keyframe animation for smooth scrolling effect */
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .congratulation {
+                width: 250px; /* Adjust width for medium screens */
+            }
+
+            .image-container {
+                width: 80px;
+                height: 80px;
+            }
+
+            .congratulation img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .marquee-content {
+                animation: scroll 25s linear infinite; /* Slowed down animation speed for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .congratulation {
+                width: 200px; /* Adjust width for small screens */
+                margin: 5px;
+            }
+
+            .image-container {
+                width: 70px;
+                height: 70px;
+            }
+
+            .congratulation img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .marquee-content {
+                animation: scroll 30s linear infinite; /* Slowed down animation speed for very small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Congratulations!</h1>
+    <div class="marquee">
+        <div class="marquee-content">
+            <div class="congratulation">
+                <h2>Bhavna Trust Degree College</h2>
+                <p>Placement Cell Wishes You</p>
+                <div class="image-container">
+                    <img src="image copy 2.png" alt="Omkar Ghole">
+                </div>
+                <h3>Congratulations Omkar Ghole</h3>
+                <p>On your Placement in Pentagon with a CTC of 4.5 LPA</p>
+                <span class="company">Pentagon</span>
+                <span class="ctc">4.5 LPA</span>
+            </div>
+
+            <div class="congratulation">
+                <h2>Bhavna Trust Degree College</h2>
+                <p>Placement Cell Wishes You</p>
+                <div class="image-container">
+                    <img src="image copy 3.png" alt="Akash Savita">
+                </div>
+                <h3>Congratulations Akash Savita</h3>
+                <p>On your Placement in Reliance Industries Limited with a CTC of 8 LPA</p>
+                <span class="company">Reliance Industries Limited</span>
+                <span class="ctc">8 LPA</span>
+            </div>
+
+            <div class="congratulation">
+                <h2>Bhavna Trust Degree College</h2>
+                <p>Placement Cell Wishes You</p>
+                <div class="image-container">
+                    <img src="image copy.png" alt="Nikita Badkas">
+                </div>
+                <h3>Congratulations Nikita Badkas</h3>
+                <p>On your Placement in Technimont with a CTC of 6.5 LPA</p>
+                <span class="company">Technimont</span>
+                <span class="ctc">6.5 LPA</span>
+            </div>
+
+            <div class="congratulation">
+                <h2>Bhavna Trust Degree College</h2>
+                <p>Placement Cell Wishes You</p>
+                <div class="image-container">
+                    <img src="image copy 4.png" alt="Sara Patel">
+                </div>
+                <h3>Congratulations Sara Patel</h3>
+                <p>On your Placement in TCS with a CTC of 5 LPA</p>
+                <span class="company">TCS</span>
+                <span class="ctc">5 LPA</span>
+            </div>
+
+            <div class="congratulation">
+                <h2>Bhavna Trust Degree College</h2>
+                <p>Placement Cell Wishes You</p>
+                <div class="image-container">
+                    <img src="image copy 5.png" alt="Ravi Kumar">
+                </div>
+                <h3>Congratulations Ravi Kumar</h3>
+                <p>On your Placement in Infosys with a CTC of 7 LPA</p>
+                <span class="company">Infosys</span>
+                <span class="ctc">7 LPA</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

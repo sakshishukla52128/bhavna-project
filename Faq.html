@@ -4,56 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
-    <style>
-        /* Add styles here to avoid inline styling */
-        body {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            background-color: #f0f0f0;
-        }
-        .faq-container {
-            background-color: #00004d;
-            color: aliceblue;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            animation: fade-in 1s;
-        }
-        .faq-question {
-            font-size: larger;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-        .faq-question:hover {
-            color: #fff;
-        }
-        .faq-answer {
-            font-size: larger;
-            padding: 10px;
-            animation: slide-in 0.5s;
-            opacity: 0;
-        }
-        .faq-answer.show {
-            opacity: 1;
-        }
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        @keyframes slide-in {
-            from {
-                transform: translateY(-10px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="faq.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
     <div class="faq-container">
@@ -68,7 +19,7 @@
         </details>
         <details>
             <summary class="faq-question">CAN A STUDENT SIT FOR PLACEMENTS AND HIGHER STUDIES BOTH AT THE SAME TIME?</summary>
-            <p class="faq-answer">Yes, a student can sit for placements and higher studies both at the same time. However, it depends on various factors such as the student's career goals, financial situation, and personal preferences. If a student wants to gain work experience and hands-on knowledge, they can opt for campus placements.</p>
+            <p class="faq-answer">Yes, a student can sit for placements and higher studies both at the same time. However, it depends on various factors such as the student's career goals, financial situation, and personal preferences.</p>
         </details>
     </div>
     <script>

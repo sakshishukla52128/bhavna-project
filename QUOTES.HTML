@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Btdc Project</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 70%; /* Reduced width */
+            margin: 20px auto;
+        }
+
+        .quote-section, .vision-section {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            color: #00004d;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 2px solid #00004d; /* Added border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+            transition: transform 0.3s ease-in-out; /* Added animation */
+        }
+
+        .quote-section:hover, .vision-section:hover {
+            transform: scale(1.05); /* Hover effect for animation */
+        }
+
+        .quote-section img, .vision-section img {
+            max-width: 180px; /* Adjusted image size */
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .quote-section p, .vision-section p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .quote-section p span, .vision-section p span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #001860; /* Color change for emphasis */
+        }
+
+        .vision-section img {
+            max-width: 200px; /* Adjusted image size */
+            height: 150px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Quote Section -->
+        <div class="quote-section">
+            <img src="principal.png" alt="Dr. Aruna Singham">
+            <p>
+                "We want that education by which character is formed, strength of mind is increased, the intellect is expanded, and by which one can stand on one's own feet” 
+                <span>-Dr. Aruna Singham</span>
+            </p>
+        </div>
+
+        <!-- Vision Section -->
+        <div class="vision-section">
+            <p>
+                Our vision is to create a community of learners who are curious, creative, and courageous; who are equipped to navigate the complexities of the world and to make a positive difference in the lives of others
+                <span>-Atul Sir</span>
+            </p>
+            <img src="atulsir.png" alt="Logo">
+        </div>
+    </div>
+</body>
+</html>

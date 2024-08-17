@@ -1,0 +1,218 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    color: #00004d;
+}
+
+header {
+    height: 100vh;
+}
+
+main {
+    padding: 2rem;
+    padding-top: 120px; /* Adjust this value to match the height of your navbar */
+}
+
+/* Section Styles */
+main section {
+    padding-top: 80px; /* Adjust this value to control the spacing below the navbar */
+    margin-top: -80px; /* Same as padding-top to offset the section's position */
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 140px; /* Adjust this value for smaller screens if necessary */
+    }
+    main section {
+        padding-top: 100px; /* Adjust this value for mobile view */
+        margin-top: -100px; /* Same as padding-top to offset the section's position */
+    }
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease, top 0.5s ease-in-out;
+}
+
+/* Mobile Responsive Navigation Bar Styles */
+@media (max-width: 768px) {
+    .navbar {
+        background-color: #00004d; /* Set the background color to #00004d for mobile */
+    }
+}
+
+/* Logo Styles */
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Align logo to the left */
+}
+
+.logo img {
+    width: 60px; /* Adjust size for mobile */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Logo Text Styles */
+.logo-text {
+    flex: 6; /* Allow the text to take up more space in the middle */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    text-align: center;
+    width: 100%;
+}
+
+.logo-text h1 {
+    font-size: xx-large; /* Adjusted font size for mobile */
+    color: #00004d;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0; /* Remove margin */
+}
+
+/* Mobile Responsive Logo Text Styles */
+@media (max-width: 768px) {
+    .logo-text h1 {
+        background-color: #00004d; /* Set the background color to #00004d for mobile */
+        color: white; /* Change text color to white for better contrast */
+        padding: 10px;
+        border-radius: 5px;
+        margin: 0; /* Remove margin */
+    }
+}
+
+/* Larger Screen Styles (for laptops and desktops) */
+@media (min-width: 769px) {
+    .logo-text h1 {
+        white-space: nowrap; /* Prevent text from wrapping onto a new line */
+    }
+}
+
+/* Navigation Links Styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-right: 2rem;
+}
+
+.nav-links a {
+    color: #00004d;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #00004d;
+}
+
+/* Burger Menu Styles */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 27px; /* Original width */
+    top: 10px;
+}
+
+.burger div {
+    width: 33px; /* Adjusted width to match the burger container */
+    height: 3.5px;
+    background-color: white;
+    transition: transform 0.5s ease-in-out;
+}
+
+.burger.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active .line2 {
+    opacity: 0;
+}
+
+.burger.active .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 75%; /* Full width minus the gap */
+        max-width: 300px; /* Maximum width for the menu */
+        background-color: #333333; /* Slightly lighter black background */
+        position: absolute;
+        top: 60px;
+        right: 0; /* Align to the right side */
+        z-index: 999;
+        padding: 1rem 0;
+        text-align: left; /* Align text to the left */
+        transform: translateX(10%); /* Shift the menu to the right, creating more space on the right side */
+        border-radius: 10px; /* Add border-radius to create rounded corners */
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0); /* Reset the shift when menu is active */
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        width: 100%;
+        padding-left: 1rem; /* Add padding to align the text */
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 18px;
+        display: block; /* Ensure links take up the full width */
+        padding: 10px; /* Add some padding for better touch target */
+        border-radius: 5px; /* Rounded corners for links */
+        transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    }
+
+    .nav-links a:active {
+        color: #ff6600; /* Change color on click */
+        background-color: #00004d; /* Add background color on click to make it visible */
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .burger div {
+        border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+}
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5; /* Light background color for contrast */
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #00004d;
+  margin: 50px auto;
+  padding: 30px;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  max-width: 1200px; /* Restrict max width for better centering */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Shadow for depth */
+}
+
+.card {
+  text-align: center;
+  padding: 25px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  margin: 15px; /* Add margin for spacing between cards */
+  width: calc(50% - 40px); /* 50% width minus margin for smaller screens */
+  background: linear-gradient(145deg, #ffffff, #e0e0e0); /* Gradient background */
+  transition: transform 0.4s, box-shadow 0.4s, background 0.4s; /* Smooth hover effects */
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  background: linear-gradient(145deg, #f5f5f5, #dcdcdc); /* Light hover effect */
+}
+
+.fa-calendar-days,
+.fa-rocket,
+.fa-mug-hot,
+.fa-people-group {
+  font-size: 80px; /* Increased font size */
+  color: #00004d;
+  transition: color 0.4s, transform 0.4s; /* Smooth color and transform transitions */
+}
+
+.card:hover .fa-calendar-days,
+.card:hover .fa-rocket,
+.card:hover .fa-mug-hot,
+.card:hover .fa-people-group {
+  font-size: 90px; /* Increase size on hover */
+  color: #1e90ff; /* Change icon color on hover */
+}
+
+.number {
+  color: #00004d;
+  font-size: 56px; /* Larger font size for emphasis */
+  font-weight: 700;
+  margin-bottom: 15px;
+  transition: color 0.4s; /* Smooth color transition */
+}
+
+.card:hover .number {
+  color: #1e90ff; /* Change number color on hover */
+}
+
+.text {
+  color: #00004d;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px; /* Add letter spacing for a stylish look */
+}
+
+.description {
+  text-align: center;
+  margin: 50px 20px;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6; /* Improve readability */
+  font-weight: 300; /* Lighter font weight for description */
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin: 30px;
+    padding: 25px;
+  }
+
+  .card {
+    width: calc(50% - 30px); /* Adjusted card width for better fit on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    width: calc(50% - 20px); /* Adjusted card width for better fit on tablets */
+    padding: 20px;
+  }
+
+  .number {
+    font-size: 40px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .card {
+    width: 100%; /* Full width on small screens */
+    padding: 15px;
+  }
+
+  .fa-calendar-days,
+  .fa-rocket,
+  .fa-mug-hot,
+  .fa-people-group {
+    font-size: 60px; /* Reduced icon size for small screens */
+  }
+
+  .number {
+    font-size: 32px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"> <!-- Added Poppins font -->
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <i class="fa-solid fa-calendar-days"></i>
+    <h2 class="number" id="number1">0</h2>
+    <div class="text">COMPANIES</div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-rocket"></i> 
+    <h2 class="number" id="number2">0</h2>
+    <div class="text">HIGHEST PACKAGE</div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-mug-hot"></i>
+    <h2 class="number" id="number3">0</h2>
+    <div class="text">AVERAGE PACKAGE</div>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-people-group"></i>
+    <h2 class="number" id="number4">0</h2>
+    <div class="text">PLACEMENTS</div>
+  </div>
+</div>
+
+<div class="description">
+  The T&P Cell ensures that all students opting for placements get a minimum of 5 job opportunities.
+  <br>
+  A total of 5000 students are placed till date since the inception of college.
+</div>
+
+<script>
+  // Function to animate numbers
+  function animateNumber(elementId, targetNumber) {
+    let element = document.getElementById(elementId);
+    let startNumber = 0;
+    let duration = 2000; // Animation duration in milliseconds
+    let counter = setInterval(function() {
+      startNumber += 1;
+      element.textContent = startNumber;
+      if (startNumber >= targetNumber) {
+        clearInterval(counter);
+      }
+    }, duration / targetNumber); // Adjust interval for smooth animation
+  }
+
+  // Animate each number on page load
+  animateNumber("number1", 200);
+  animateNumber("number2", 25);
+  animateNumber("number3", 5);
+  animateNumber("number4", 250);
+</script>
+
+</body>
+</html>
